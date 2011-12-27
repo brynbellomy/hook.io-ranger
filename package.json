@@ -1,0 +1,22 @@
+{
+  "author": "bryn austin bellomy <bryn.bellomy@gmail.com>",
+  "name": "hook.io-ranger",
+  "description": "part of zordon (wan auto-discovery and connect hook for making friends)",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brynbellomy/hook.io-ranger.git"
+  },
+  "bin": {
+     "hookio-ranger": "./bin/ranger"
+  },
+  "main" : "lib/ranger",
+  "engines": {
+    "node": ">= v0.4.7"
+  },
+  "dependencies": {
+    "hook.io": "0.8.x",
+    "async": "0.1.x"
+  },
+  "devDependencies": {}
+}

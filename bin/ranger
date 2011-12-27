@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var Ranger = require('../lib/ranger').Ranger
+
+var optimist = require('optimist')
+               .usage('Usage: ranger --name pink-ranger -d --known aaaa.com:4999 -k bbbb.foobar.net -k 127.0.0.1')
+               .describe('help', 'Show help information.')
+               .describe('known', 'Specify a known remote Zordon host.  Will accept either a hostname/IP or both hostname/IP and port, separated by a colon.')
+               .describe('name', 'Specify the hook\'s name.')
+               .describe('debug', 'Enable debug mode.')
+               //.default('known', '66.228.46.93')
+               .default('name', Ranger.rangerColors[Math.floor(Math.random() * 10)] + '-ranger')
+               .default('debug', true)
+               .alias('k', 'known')
+               .alias('n', 'name')
+               .alias('d', 'debug')
+               .alias('h', 'help')
+
+var ranger = new Ranger(optimist.argv)
+ranger.start()
