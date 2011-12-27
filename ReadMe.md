@@ -1,1 +1,1 @@
-# Unreleased, please come back later.
+# Helper hook for [hook.io-zordon](http://github.com/brynbellomy/hook.io-zordon).  Useless without the boss man.
